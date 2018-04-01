@@ -3,7 +3,7 @@ import path from 'path';
 import fetch from 'isomorphic-fetch';
 import { buildClientSchema, printSchema } from 'graphql/utilities';
 
-import expose from './expose.js';
+import expose from './expose';
 const {__dirname} = expose;
 
 const custom = process.argv[2] === '--custom';

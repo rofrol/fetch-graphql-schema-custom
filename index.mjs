@@ -27,7 +27,7 @@ const custom = process.argv[2] === '--custom';
         JSON.stringify(result.errors, null, 2)
       );
     } else {
-      var json = await result.json();
+      const json = await result.json();
       fs.writeFileSync(
         path.join(__dirname, './schema.json'),
         JSON.stringify(json, null, 2)

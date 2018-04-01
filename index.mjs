@@ -22,10 +22,7 @@ const custom = process.argv[2] === '--custom';
     });
 
     if (result.errors) {
-      console.error(
-        'ERROR introspecting schema: ',
-        JSON.stringify(result.errors, null, 2)
-      );
+      throw new SchemaQueryError(JSON.stringify(result.errors, null, 2));
     } else {
       const json = await result.json();
       fs.writeFileSync(

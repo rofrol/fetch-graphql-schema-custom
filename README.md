@@ -13,6 +13,10 @@ cargo run
 
 Install node version >= 9, yarn and then:
 
-`yarn && yarn start`.
+`yarn && yarn start`
+
+or to run query from `introspection-query.mjs`:
+
+`yarn && yarn start --custom`.
 
 You should get files `schema.json` and `schema.graphql`.

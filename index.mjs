@@ -1,21 +1,22 @@
 import fs from 'fs';
 import path from 'path';
 import fetch from 'isomorphic-fetch';
-// import { buildClientSchema, introspectionQuery, printSchema } from 'graphql/utilities';
-import { buildClientSchema, printSchema } from 'graphql/utilities';
+import { buildClientSchema, introspectionQuery, printSchema } from 'graphql/utilities';
 import expose from './expose.js';
 const {__dirname} = expose;
-import { introspectionQuery } from './introspection-query.mjs';
+import { introspectionQuery as customIntrospectionQuery } from './introspection-query.mjs';
+
+const custom = process.argv[2] === '--custom';
 
 (async () => {
   try {
     var result = await fetch('http://127.0.0.1:8080/graphql', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          query: introspectionQuery,
-          variables: { includeDeprecated: true },
-        }),
+        body: JSON.stringify(custom
+          ? { query: customIntrospectionQuery, variables: { includeDeprecated: true } }
+          : { query: introspectionQuery }
+        ),
     });
 
     if (result.errors) {

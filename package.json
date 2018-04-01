@@ -12,5 +12,7 @@
   },
   "scripts": {
     "start": "node --experimental-modules index.mjs"
-  }
+  },
+  "engines" : { "node" : ">=9" },
+  "config" : { "engine-strict" : true }
 }

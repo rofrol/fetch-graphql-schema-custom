@@ -11,7 +11,7 @@ cargo run
 
 ## Run client
 
-Install node version >= 9, yarn and then:
+Install node, yarn and then:
 
 `yarn && yarn start`
 

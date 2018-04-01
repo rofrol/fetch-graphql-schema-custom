@@ -36,5 +36,6 @@ const custom = process.argv[2] === '--custom';
     }
   } catch (error) {
     console.error(error);
+    process.exit(1);
   }
 })()

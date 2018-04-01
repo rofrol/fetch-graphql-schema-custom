@@ -4,7 +4,7 @@ import fetch from 'isomorphic-fetch';
 import { buildClientSchema, introspectionQuery, printSchema } from 'graphql/utilities';
 import expose from './expose.js';
 const {__dirname} = expose;
-import { introspectionQuery as customIntrospectionQuery } from './introspection-query.mjs';
+import { introspectionQuery as customIntrospectionQuery } from './introspection-query';
 
 const custom = process.argv[2] === '--custom';
 

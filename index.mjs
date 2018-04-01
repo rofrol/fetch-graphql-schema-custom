@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import fetch from 'isomorphic-fetch';
+import fetch from 'node-fetch';
 import { buildClientSchema, printSchema } from 'graphql/utilities';
 
 import expose from './expose';

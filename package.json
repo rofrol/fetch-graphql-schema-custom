@@ -8,11 +8,15 @@
   "license": "Apache-2.0",
   "dependencies": {
     "graphql": "^0.13.2",
-    "isomorphic-fetch": "^2.2.1"
+    "node-fetch": "^2.1.2"
   },
   "scripts": {
     "start": "node --experimental-modules index.mjs"
   },
-  "engines" : { "node" : ">=9" },
-  "config" : { "engine-strict" : true }
+  "engines": {
+    "node": ">=9"
+  },
+  "config": {
+    "engine-strict": true
+  }
 }

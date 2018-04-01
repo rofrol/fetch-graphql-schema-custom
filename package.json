@@ -1,0 +1,16 @@
+{
+  "name": "fetch-graphql-schema-custom",
+  "version": "1.0.0",
+  "description": "Fetch graphql schema with custom query",
+  "main": "index.mjs",
+  "repository": "https://github.com/rofrol/fetch-graphql-schema-custom",
+  "author": "Roman Frołow rofrol@gmail.com",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "graphql": "^0.13.2",
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "scripts": {
+    "start": "node --experimental-modules index.mjs"
+  }
+}
